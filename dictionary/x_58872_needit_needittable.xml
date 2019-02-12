@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="task" label="NeeditTable" max_length="40" name="x_58872_needit_needittable" type="collection">
+        <element label="AAdharId" max_length="40" name="aadharid" type="integer"/>
+        <element default="0000" label="FavouriteColor" mandatory="true" max_length="8" name="employeeid" type="color"/>
+        <element default="Red" display="true" label="Fav.Color" max_length="10" name="fav_color" type="color"/>
+        <element label="when needed" mandatory="true" max_length="40" name="u_glide_date_time_1" type="glide_date_time"/>
+        <element label="Requested for" mandatory="true" max_length="32" name="u_requested_for" reference="x_58872_needit_needittable" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" default="legal" label="Request type" mandatory="true" max_length="40" name="u_request_type" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Human Resource" sequence="0" value="hr"/>
+                <element inactive="true" inactive_on_update="true" label="red" sequence="0" value="red"/>
+                <element inactive_on_update="false" label="Facilities" sequence="1" value="fclty"/>
+                <element inactive="true" inactive_on_update="true" label="white" sequence="1" value="white"/>
+                <element inactive="true" inactive_on_update="true" label="Choice 3" sequence="2" value="Choice 3"/>
+                <element inactive_on_update="false" label="legal" sequence="2" value="legal"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" default="legal1" label="What needeed" mandatory="true" max_length="40" name="u_what_needed" type="string">
+            <choice>
+                <element inactive_on_update="false" label="humanResource1" sequence="0" value="hr1"/>
+                <element inactive_on_update="false" label="finance1" sequence="1" value="finane1"/>
+                <element inactive_on_update="false" label="Your department choice 1" sequence="2" value="your department choice 1"/>
+                <element inactive_on_update="false" label="legal1" sequence="3" value="legal1"/>
+            </choice>
+        </element>
+    </element>
+</database>
